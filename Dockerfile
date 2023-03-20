@@ -4,7 +4,8 @@ FROM golang:1.18 as builder
 WORKDIR /go/bin
 
 COPY . .
-RUN go build -o /go/bin/sample  cmd/sample/main.go
+
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /go/bin/sample  cmd/sample/main.go
 
 
 FROM alpine:3.13
