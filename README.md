@@ -17,7 +17,3 @@ go build -o bin/sample cmd/sample/main.go
 ```sh
 docker build . 
 ```
-
-## TODO
-
-- [ ] standard_init_linux.go:219: exec user process caused: no such file or directory.
